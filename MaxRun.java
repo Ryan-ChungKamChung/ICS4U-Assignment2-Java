@@ -40,7 +40,7 @@ final class MaxRun {
         int maxCount = 0;
         char previous = ' ';
 
-        // Counts how many consecutive occurences for every character in
+        // Counts how many consecutive occurrences for every character in
         // userInput
         for (char character : userInput.toCharArray()) {
 
