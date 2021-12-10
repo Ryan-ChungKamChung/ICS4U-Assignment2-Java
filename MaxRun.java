@@ -34,7 +34,7 @@ final class MaxRun {
     * @param userInput is the user-inputted String
     * @return the highest run of characters
     */
-    public static int maxRun(String userInput) {
+    public static int maxRun(final String userInput) {
 
         int count = 0;
         int maxCount = 0;
