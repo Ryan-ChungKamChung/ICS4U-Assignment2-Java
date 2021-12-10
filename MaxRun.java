@@ -38,9 +38,10 @@ final class MaxRun {
 
         int count = 0;
         int maxCount = 0;
-
         char previous = ' ';
 
+        // Counts how many consecutive occurences for every character in
+        // userInput
         for (char character : userInput.toCharArray()) {
 
             if (character == previous) {
@@ -65,14 +66,22 @@ final class MaxRun {
     */
     public static void main(final String[] args) {
 
+        final String userInput;
+        final int maxRun;
+
         try {
+            // User input
             System.out.print("Enter a string: ");
 
-            final String inputString = new BufferedReader(
+            userInput = new BufferedReader(
                 new InputStreamReader(System.in)
             ).readLine();
 
-            System.out.println("Max Run: " + maxRun(inputString));
+            // Calls maxRun() to get the max run
+            maxRun = maxRun(userInput);
+
+            // Outputs it to the user
+            System.out.println("Max Run: " + maxRun);
         } catch (IOException exception) {
             System.out.println("Please enter a string.");
         } finally {
